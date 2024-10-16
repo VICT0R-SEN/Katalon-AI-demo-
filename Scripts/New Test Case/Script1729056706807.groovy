@@ -26,15 +26,27 @@ Enter valid password in the password field
 Password is entered successfully
 password: testpassword123
 Click on the login button*/
-
 // Navigate to the application login page
-WebUI.navigateToUrl('http://www.example.com/login')
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
+
+WebUI.click(findTestObject('Page_CURA Healthcare Service/Main Menu'))
+
+WebUI.click(findTestObject('Page_CURA Healthcare Service/a_Login'))
 
 // Enter valid username in the username field
-WebUI.setText(findTestObject('Page_Login/input_Username'), 'testuser')
+WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_Username_username'), 'John Doe')
 
 // Enter valid password in the password field
-WebUI.setText(findTestObject('Page_Login/input_Password'), 'testpassword123')
+WebUI.setEncryptedText(findTestObject('Page_CURA Healthcare Service/input_Password_password'), 'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM')
 
 // Click on the login button
-WebUI.click(findTestObject('Page_Login/button_Login'))
+WebUI.click(findTestObject('Page_CURA Healthcare Service/button_Login'))
+
+WebUI.closeBrowser()
+
+
+
+
+
